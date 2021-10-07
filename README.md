@@ -9,6 +9,7 @@
 You need to create a read/write API token under `My Account` > [`API Tokens`](https://control.cloudscale.ch/user/api-tokens) in the [cloudscale.ch Control Panel](https://control.cloudscale.ch/server)
 and pass it to `docker-machine create` as the `--cloudscale-token` option.
 
+
 ## Installation
 
 You can find sources and pre-compiled binaries [here](https://github.com/cloudscale-ch/docker-machine-driver-cloudscale/releases).
@@ -22,6 +23,7 @@ $ tar xzvf docker-machine-driver-cloudscale_v1.2.0_linux_amd64.tar.gz
 $ chmod +x docker-machine-driver-cloudscale
 $ cp docker-machine-driver-cloudscale /usr/local/bin/
 ```
+
 
 ## Usage
 
@@ -37,6 +39,7 @@ $ docker-machine create \
 
 See `docker-machine create  --driver cloudscale --help` for a complete list of all supported options.
 
+
 ### Using environment variables
 
 ```bash
@@ -51,9 +54,11 @@ $ CLOUDSCALE_TOKEN=... \
 
 See `docker-machine create  --driver cloudscale --help` for a complete list of all supported environment variables.
 
+
 ### Using cloud-init
 
 User data (cloud-config for cloud-init) to use for the new server. Needs to be valid YAML. 
+
 
 #### From File
 
@@ -75,6 +80,7 @@ $ docker-machine create \
   --cloudscale-userdatafile=/tmp/my-user-data.yaml \
   some-machine
 ```
+
 
 #### From Command Line
 
@@ -128,6 +134,7 @@ $ docker-machine create --driver cloudscale --help
 $ make snapshot
 ```
 
+
 ### Integration Tests
 
 In order to run the integration test suite, please make sure that:
@@ -142,6 +149,7 @@ If all of the above is fullfilled, invoke the test suite by calling:
 
 
 ## Credits
+
 This driver is based on the great work of:
 * [JonasProgrammer](https://github.com/JonasProgrammer/) for [docker-machine-driver-hetzner](https://github.com/JonasProgrammer/docker-machine-driver-hetzner)
 * [splattner](https://github.com/splattner) from [Puzzle ITC](https://www.puzzle.ch)
