@@ -27,7 +27,7 @@ function teardown() {
   load ./assert_no_server
 
   # act
-  run docker-machine create --driver cloudscale --engine-install-url "$ENGINE_INSTALL_URL" --cloudscale-zone rma1 "$MACHINE_NAME"
+  run docker-machine create --driver cloudscale --engine-install-url "$ENGINE_INSTALL_URL" --cloudscale-zone lpg1 "$MACHINE_NAME"
 
   # assert
   docker-machine ssh "$MACHINE_NAME" 'apt-get install -y jq'
